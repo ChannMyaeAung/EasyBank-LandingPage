@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;0,800;0,900;1,400;1,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@layer components {
+  .navLinksMobile {
+    @apply container overflow-hidden fixed left-0 right-0 top-[4rem] rounded-md max-w-[300px] mx-auto bg-white shadow-lg;
+  }
+
+  .requestBtn {
+    @apply bg-gradient-to-r from-limeGreen to-brightCyan px-4 py-1 text-[14px] text-White rounded-full bg-left;
+  }
+
+  .requestBtn:hover {
+    @apply bg-gradient-to-l from-brightCyan to-lime-200;
+  }
+}
