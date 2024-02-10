@@ -1,9 +1,11 @@
-import { Suspense, lazy, useState } from "react";
+import { Suspense, lazy } from "react";
 
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
 const Hero = lazy(() => import("./components/Hero"));
 const BankInfo = lazy(() => import("./components/BankInfo"));
-const LatestArticles = lazy(() => import("./components/LatestArticles"));
+const LatestArticles = lazy(() =>
+  import("./components/latestArticles/LatestArticles")
+);
 const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
