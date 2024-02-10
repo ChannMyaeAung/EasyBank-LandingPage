@@ -49,3 +49,42 @@ body::-webkit-scrollbar-thumb {
   background-color: hsl(136, 65%, 51%);
   outline: 1px solid hsl(136, 65%, 51%);
 }
+
+.toggleMenu {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  margin-top: 20px;
+  padding: 0 0.5rem;
+  transition: all 0.2s ease;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.toggleMenu:hover,
+.toggleMenu:focus-visible {
+  transform: scale(1.2);
+}
+
+.toggleMenu__topBar,
+.toggleMenu__bottomBar {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  transition: all 500ms ease-in-out;
+  z-index: 20;
+  top: 0;
+  background-color: black;
+}
+
+.toggleMenu__bottomBar {
+  transform: translate(5px, 10px) rotate(0deg);
+}
+
+.toggleMenu.open .toggleMenu__bottomBar {
+  transform: rotate(45deg);
+}
+
+.toggleMenu.open .toggleMenu__topBar {
+  transform: rotate(135deg);
+}
