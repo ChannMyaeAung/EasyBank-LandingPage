@@ -12,7 +12,7 @@ export default function DesktopNav() {
         {NavLinks.map((navLink) => {
           const { id, links, content } = navLink;
 
-          return <NavLink id={id} links={links} content={content} />;
+          return <NavLink key={id} id={id} links={links} content={content} />;
         })}
       </ul>
 

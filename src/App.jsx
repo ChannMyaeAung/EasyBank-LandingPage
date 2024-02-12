@@ -6,7 +6,7 @@ const BankInfo = lazy(() => import("./components/bankInfo/BankInfo"));
 const LatestArticles = lazy(() =>
   import("./components/latestArticles/LatestArticles")
 );
-const Footer = lazy(() => import("./components/Footer"));
+const Footer = lazy(() => import("./components/footer/Footer"));
 
 function App() {
   return (

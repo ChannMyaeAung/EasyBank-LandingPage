@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "../styles";
-import { footerLinks } from "../data";
+import styles from "../../styles";
+import { footerLinks } from "../../data";
+import SocialLinks from "./socialLinks";
+import NavLinks from "./NavLinks";
 
 const Footer = () => {
   return (
@@ -19,46 +21,14 @@ const Footer = () => {
             </span>
           </div>
           {/* social media icons/links */}
-          <div className={`${styles.flexCenter} gap-5 `}>
-            <img
-              src="/icon-facebook.svg"
-              alt="facebook-icon"
-              className={`${styles.cursorTransition} hover:scale-125`}
-            />
-            <img
-              src="/icon-youtube.svg"
-              alt="youtube-icon"
-              className={`${styles.cursorTransition} hover:scale-125`}
-            />
-            <img
-              src="/icon-twitter.svg"
-              alt="twitter-icon"
-              className={`${styles.cursorTransition} hover:scale-125`}
-            />
-            <img
-              src="/icon-pinterest.svg"
-              alt="pinterest-icon"
-              className={`${styles.cursorTransition} hover:scale-125`}
-            />
-            <img
-              src="/icon-instagram.svg"
-              alt="instagram-icon"
-              className={`${styles.cursorTransition} hover:scale-125`}
-            />
-          </div>
+          <SocialLinks />
         </div>
         {/* footer navlinks */}
         <div
           className={`${styles.gridCenter} gap-3 grid-cols-1 pt-5 md:grid-cols-2 md:items-start md:justify-start md:gap-x-0 md:w-[18rem] lg:w-[20rem]`}
         >
           {footerLinks.map((link) => (
-            <ul key={link.id}>
-              <li
-                className={`${styles.cursorTransition} hover:tracking-[2px] hover:text-limeGreen text-White text-center md:text-left`}
-              >
-                <a href={link.linkTo}>{link.content}</a>
-              </li>
-            </ul>
+            <NavLinks key={link.id} link={link} />
           ))}
         </div>
       </div>
