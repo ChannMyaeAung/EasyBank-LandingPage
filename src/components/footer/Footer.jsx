@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles";
 import { footerLinks } from "../../data";
-import SocialLinks from "./socialLinks";
+import SocialLinks from "./SocialLinks";
 import NavLinks from "./NavLinks";
 
 const Footer = () => {
