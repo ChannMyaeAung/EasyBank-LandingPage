@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 
 const Navbar = lazy(() => import("./components/navbar/Navbar"));
 const Hero = lazy(() => import("./components/hero/Hero"));
-const BankInfo = lazy(() => import("./components/BankInfo"));
+const BankInfo = lazy(() => import("./components/bankInfo/BankInfo"));
 const LatestArticles = lazy(() =>
   import("./components/latestArticles/LatestArticles")
 );
